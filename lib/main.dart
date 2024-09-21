@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_learning/Pages/homePage.dart';
-import 'package:provider_learning/Pages/postName.dart';
-import 'package:provider_learning/Widgets/publicacion.dart';
 import 'package:provider_learning/porviders/favoriteProvider.dart';
 
 void main() {
@@ -18,6 +16,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => Favoriteprovider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

@@ -1,13 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:provider_learning/Classes/publicationClass.dart';
 
 class Favoriteprovider extends ChangeNotifier {
-  IconData icon = Icons.star_outline;
+  List<PublicationClass> publicationClasssList = [
+    PublicationClass(
+        title: 'Publication 1 ',
+        isFavorite: false,
+        content: 'jdlakdjaldjadlakjdlakdjalkdjaldkjadlkjasd'),
+    PublicationClass(
+        title: 'Publication 2 ',
+        isFavorite: false,
+        content: 'jdlakdjaldjadlakjdlakdjalkdjaldkjadlkjasd'),
+    PublicationClass(
+        title: 'Publication 3 ',
+        isFavorite: false,
+        content: 'jdlakdjaldjadlakjdlakdjalkdjaldkjadlkjasd'),
+    PublicationClass(
+        title: 'Publication 4 ',
+        isFavorite: false,
+        content: 'jdlakdjaldjadlakjdlakdjalkdjaldkjadlkjasd'),
+  ];
 
-  void favoriteChecked() {
-    if (icon == Icons.star_outline) {
-      icon = Icons.star;
+  void favoriteVerification(PublicationClass p) {
+    if (p.isFavorite == false) {
+      p.isFavorite = true;
+      print('hola');
     } else {
-      icon = Icons.star_outline;
+      p.isFavorite = false;
     }
     notifyListeners();
   }
